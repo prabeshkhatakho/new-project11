@@ -11,6 +11,6 @@ function mardi() {
   )
 }
 
-export default mardi
+export default mardi;
 
 
