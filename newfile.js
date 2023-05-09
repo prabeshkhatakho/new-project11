@@ -1,16 +1,25 @@
-
 import React from 'react'
 
-function washingmachine() {
+function language() {
   return (
     <div>
-      <h1>mardi</h1>
-      <h1>mardi himal trek</h1>
-      <h1>tell me abouteverest himal trek</h1>
-      <p>Everest Himal Trek is one of the most popular treks in Nepal. It takes you through some of the most stunning scenery in the world, including the Everest region. The trek can be done in around two weeks, and is a</p>
+      
+<h1>different types of programming language</h1>
+<p>There are many types of programming languages, including:
+
+-Assembly languages
+-High-level languages
+-Low-level languages
+-Object-oriented languages
+-Procedural languages
+-Functional languages</p>
+<h1>what is oop </h1>
+<p>Object-oriented programming (OOP) is a programming language model in which programs are organized around data, or objects, rather than functions and logic. An object can be a data structure, a variable, or a function. In object-</p>
+<h1>what is functional programming language</h1>
+<p>A functional programming language is a programming language that supports and encourages the use of a functional programming style.</p>
     </div>
   )
 }
 
-export default washingmachine;
+export default language
 

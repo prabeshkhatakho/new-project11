@@ -2,16 +2,41 @@ import os
 from pathlib import Path
 import json
 import pprint
+import openai
 
 file = open("my-app/src/components/data.json", "r")
 config = json.load(file)
 title = config[1]['title']
-question = config[1]['question']
+questions = config[1]['question']
 name = config[1]['name']
 
 
+answers = []
 
-pprint.pprint(config)
+for question in questions:
+  openai.api_key = "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"
+
+  prompt = f"{question}"
+  response = openai.Completion.create(
+  engine="text-davinci-002",
+  prompt=prompt,
+  max_tokens=50,
+  n=1,
+  stop=None,
+  temperature=0.5,
+  )
+
+  message = response.choices[0].text.strip()
+  print(message)
+
+  answers.append(message)
+print(answers)
+
+body = ""
+
+for question, answer  in zip(questions, answers):
+  body = body + "\n<h1>{}</h1>\n<p>{}</p>".format(question, answer)
+
 
 
 file_path = "newfile.js"
@@ -25,21 +50,14 @@ js_code = """import React from 'react'
 function language() {{
   return (
     <div>
-      <h1>{0}</h1>
-      <p>{1[0]}</p>
-        <br></br>
-        <h1>{1[1]}</h1>
-        <p></p>
-        <br></br>
-        <h1>{1[2]}</h1>
-        <p></p>
+      {1}
     </div>
   )
 }}
 
 export default language
 
-""".format(name,question)
+""".format(answer,body,question)
 
 file = Path(file_path)
 file.write_text(js_code)
