@@ -4,9 +4,6 @@ import openai
 
 
 
-
-
-
 file = open("my-app/src/components/data.json", "r")
 data = json.load(file)
 title = data[0]['title']

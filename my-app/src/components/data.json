@@ -2,13 +2,18 @@
     {
         "name":"mardi", 
         "title":"mardi himal trek",
-        "question":"tell me about mardi himal trek"
+        "questions":["tell me about mardi himal trek"]
         
     },
     {
         "name":"language",  
         "title":"about programming language",
-        "question":["different types of programming language", "what is oop ", "what is functional programming language"]
+        "questions":["different types of programming language", "what is oop ", "what is functional programming language"]
+    },
+    {
+        "name":"Nepalifood",  
+        "title":"History of Nepali food",
+        "questions":["Brief origin of Nepali food", "What kind of spices are used in Nepali food?", "What are some of the best Nepali food?"]
     }
 ]
 
