@@ -14,7 +14,7 @@ name = config[1]['name']
 answers = []
 
 for question in questions:
-  openai.api_key = "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"
+  openai.api_key = "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"
 
   prompt = f"{question}"
   response = openai.Completion.create(
@@ -27,7 +27,6 @@ for question in questions:
   )
 
   message = response.choices[0].text.strip()
-  print(message)
 
   answers.append(message)
 print(answers)
@@ -47,17 +46,18 @@ if os.path.exists(file_path):
     print(f"File '{file_path}' already exists and has been deleted.")
 js_code = """import React from 'react'
 
-function language() {{
+function {1}() {{
   return (
     <div>
+      {0}
       {1}
     </div>
   )
 }}
 
-export default language
+export default {1};
 
-""".format(answer,body,question)
+""".format(body,name)
 
 file = Path(file_path)
 file.write_text(js_code)

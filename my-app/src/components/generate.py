@@ -13,7 +13,7 @@ title = data[0]['title']
 question = data[0]['question']
 name = data[0]['name']
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 prompt = f"{question}"
 response = openai.Completion.create(
@@ -31,6 +31,7 @@ print(message + "hello")
 
 
 pprint.pprint(data)
+
 
 js_code = '''
 import React from 'react'

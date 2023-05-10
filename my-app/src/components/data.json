@@ -1,8 +1,9 @@
 [
     {
         "name":"mardi", 
-        "question":"tell me abouteverest himal trek", 
-        "title":"mardi himal trek"
+        "title":"mardi himal trek",
+        "question":"tell me about mardi himal trek"
+        
     },
     {
         "name":"language",  
@@ -10,3 +11,4 @@
         "question":["different types of programming language", "what is oop ", "what is functional programming language"]
     }
 ]
+
