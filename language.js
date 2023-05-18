@@ -7,9 +7,13 @@
         
         
 <h1>different types of programming language</h1>
-<p>There are many types of programming languages, each designed for a different purpose. Some common programming language types include:
+<p>There are a variety of different types of programming languages, each with its own unique set of features and capabilities. Some of the most popular programming languages include:
 
--General purpose: these languages are designed to be used for a wide range of tasks. Examples include C++, Java</p>
+-C++
+-Java
+-Python
+-Ruby
+-PH</p>
       </div>
     )
   }

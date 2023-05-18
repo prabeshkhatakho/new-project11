@@ -10,9 +10,6 @@ datas = json.load(file)
 links = []
 
 
-
-
-
 for data in datas:
   
   title = data['title']
@@ -25,7 +22,7 @@ for data in datas:
 
   for question in questions:
 
-    openai.api_key = "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"
+    openai.api_key = ""
 
     prompt = f"{question}"
     response = openai.Completion.create(
@@ -76,7 +73,8 @@ home_path = f"home.js"
 
 links_code = "\n".join(links)
   
-  
+os.chdir("my-app/src/components")
+
 if os.path.exists(home_path):
   os.remove(home_path)
   print(f"File '{home_path}' already exists and has been deleted.")

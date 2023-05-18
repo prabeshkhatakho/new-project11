@@ -5,9 +5,8 @@
   function Home() {
     return (
       <div>
-        
         <Link to='language'>language</Link>
-<Link to='newdata'>newdata</Link>
+        <Link to='newdata'>newdata</Link>
       </div>
     )
   }
