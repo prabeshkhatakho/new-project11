@@ -1,17 +1,16 @@
 import json
-import pprint
 import openai
 import os
 from pathlib import Path
 
+api_key = os.environ.get('OPENAI_API_KEY')
+
+
 
 file = open("my-app/src/components/data.json", "r")
+os.chdir("my-app/src/components")
 datas = json.load(file)
 links = []
-
-
-
-
 
 for data in datas:
   
@@ -25,7 +24,7 @@ for data in datas:
 
   for question in questions:
 
-    openai.api_key = "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"
+    openai.api_key = api_key
 
     prompt = f"{question}"
     response = openai.Completion.create(
@@ -46,6 +45,7 @@ for data in datas:
 
   file_path = f"{name}.js"
   
+  
   if os.path.exists(file_path):
       os.remove(file_path)
       print(f"File '{file_path}' already exists and has been deleted.")
@@ -56,7 +56,6 @@ for data in datas:
   function {1}() {{
     return (
       <div>
-        
         {0}
       </div>
     )
@@ -74,7 +73,8 @@ for data in datas:
 
 home_path = f"home.js"
 
-links_code = "\n".join(links)
+links_code = "\n" .join(links)
+
   
   
 if os.path.exists(home_path):
@@ -101,7 +101,7 @@ file.write_text(home_js_code, encoding='utf-8')
 print(f"File '{home_path}' has been created with the JavaScript code.")
 
   
-print(links)
+
   
   
  
